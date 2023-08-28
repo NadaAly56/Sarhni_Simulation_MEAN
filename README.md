@@ -3,7 +3,7 @@
 
 ## Introduction
 
-Sarhni Simulation is a MEAN full-stack project designed to [briefly describe the project's purpose and functionality]. By combining the robustness of MongoDB, the flexibility of Express.js, the interactivity of Angular, and the scalability of Node.js, this project offers a seamless user experience.
+Sarhni Simulation is a MEAN full-stack project designed to simulate sarhni application. By combining the robustness of MongoDB, the flexibility of Express.js, the interactivity of Angular, and the scalability of Node.js, this project offers a seamless user experience.
 
 ## Dependencies
 
