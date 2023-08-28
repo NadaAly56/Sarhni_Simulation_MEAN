@@ -31,10 +31,12 @@ To begin with the Sarhni Simulation project, follow the steps below.
    git clone https://github.com/NadaAly56/Sarhni_Simulation_MEAN.git
 
 2. Navigate to the project directory:
-cd Sarhni_Simulation_MEAN
+    ```bash
+   cd Sarhni_Simulation_MEAN
 
-3. Install the required dependencies using npm:
-npm install
+4. Install the required dependencies using npm:
+    ```bash
+   npm install
 
 ### Configuration
 
