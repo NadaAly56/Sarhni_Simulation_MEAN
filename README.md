@@ -35,12 +35,12 @@ Sarhni Clone is a full-stack web application that allows users to receive anonym
    cd Sarhni_Simulation_MEAN
 
 2. Install the frontend dependencies:
-  ```bash
+    ```bash
    cd frontend
    npm install
 
 4. Install the backend dependencies:
-  ```bash
+    ```bash
     cd ../backend
     npm install
 
@@ -56,14 +56,12 @@ Sarhni Clone is a full-stack web application that allows users to receive anonym
       DBCONNECTION=your_mongodb_connection_string
 
 6. Start the Frontend and Backend:
-      In the frontend directory:
+  In the frontend directory:
       ```bash
       npm start
-
-      In the backend directory:
-      ```bash
-      npm start
-      or nodemon
+    In the backend directory:
+    npm start
+    or nodemon
 
 ## Usage
 
