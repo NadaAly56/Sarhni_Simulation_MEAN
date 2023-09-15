@@ -16,7 +16,10 @@ Sarhni Clone is a full-stack web application that allows users to receive anonym
 
 - **Frontend**:
   - Angular
-  - Angular Material
+  - Bootstrap
+  - Fontawesome
+  - Angular forms
+  - Angular cdk
   - Angular Router
   - HttpClient for API requests
 
@@ -24,7 +27,11 @@ Sarhni Clone is a full-stack web application that allows users to receive anonym
   - Node.js with Express.js
   - MongoDB for database storage
   - Mongoose for database modeling
-  - Passport.js for authentication
+  - Bcrypt for hashing password
+  - Jwt to make token
+  - Joi for validation
+  - Express global error handling
+  - Cors
   - Nodemailer for sending confirmation emails
 
 ## Installation
@@ -48,12 +55,12 @@ Sarhni Clone is a full-stack web application that allows users to receive anonym
   
       Create a .env file in the backend directory and set the following environment variables:
       ```bash
-      PASS=your_password
-      EMAIL=your_email
-      KEY=your_secret_key
-      ROUND=number_of_rounds_for_password_hashing
-      PORT=your_server_port
-      DBCONNECTION=your_mongodb_connection_string
+      - PASS=your_password
+      - EMAIL=your_email
+      - KEY=your_secret_key
+      - ROUND=number_of_rounds_for_password_hashing
+      - PORT=your_server_port
+      - DBCONNECTION=your_mongodb_connection_string
 
 6. Start the Frontend and Backend:
   In the frontend directory:
