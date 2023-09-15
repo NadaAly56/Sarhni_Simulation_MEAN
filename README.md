@@ -3,10 +3,11 @@
 ## Project Description
 
 Sarhni Clone is a full-stack web application that allows users to receive anonymous messages from others without knowing the sender's identity. Users can create an account using their email, verify their email through a confirmation link, and then sign in to read and manage the received messages. Additionally, users can generate a sharable link to receive messages from friends without revealing their identity.
+- Demo video https://drive.google.com/file/d/1sNGSPlxLdoxUD326VUggeZnJoD5DMrPs/view?usp=sharing
 
 ### Features
 
-- User registration and authentication via email confirmation, youser can't sign in without consirmation.
+- User registration and authentication via email confirmation, user can't sign in without confirmation.
 - Send and receive anonymous messages.
 - Delete received messages.
 - Generate sharable links for friends to send anonymous messages.
@@ -34,15 +35,19 @@ Sarhni Clone is a full-stack web application that allows users to receive anonym
    cd Sarhni_Simulation_MEAN
 
 2. Install the frontend dependencies:
+  ```bash
    cd frontend
    npm install
 
-3. Install the backend dependencies:
-   cd ../backend
-   npm install
+4. Install the backend dependencies:
+  ```bash
+    cd ../backend
+    npm install
 
-4. Set up Environment Variables:
+5. Set up Environment Variables:
+  
       Create a .env file in the backend directory and set the following environment variables:
+      ```bash
       PASS=your_password
       EMAIL=your_email
       KEY=your_secret_key
@@ -50,11 +55,13 @@ Sarhni Clone is a full-stack web application that allows users to receive anonym
       PORT=your_server_port
       DBCONNECTION=your_mongodb_connection_string
 
-5. Start the Frontend and Backend:
+6. Start the Frontend and Backend:
       In the frontend directory:
+      ```bash
       npm start
 
       In the backend directory:
+      ```bash
       npm start
       or nodemon
 
