@@ -3,19 +3,24 @@ import mongoose from "mongoose";
 const userSchema = mongoose.Schema({
     name: {
         type: String,
-        required:true,
-        minLength:[4, 'name is too short'],
-        maxLength:[20, 'name is too long'],
+        required: true,
+        minlength: [4, 'Name is too short'],
+        maxlength: [20, 'Name is too long'],
     },
     email: {
         type: String,
         required: true,
-        unique: [true, 'email is already in use']
+        unique: true,
     },
     password: {
         type: String,
-        // required:true,
-        minLength:[8, 'password is too short'],
+        required: true,
+        validate: {
+            validator: function(v) {
+              return /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/.test(v);
+            },
+            message: 'password must be A-Z a-z 0-9 9>'
+          }
     },
     age: {
         type: Number,
@@ -27,6 +32,6 @@ const userSchema = mongoose.Schema({
         type: Boolean,
         default: false,
     }
-})
+});
 
 export const userModel = mongoose.model('user', userSchema);

@@ -1,6 +1,6 @@
 import express from 'express'
 import { deleteMsg, getUserMsgs, sendMsg } from './message.controller.js'
-import userAuth from '../../middleWares/auth.js'
+import {userAuth} from '../../middleWares/auth.js'
 import { validation } from '../../middleWares/validation.js'
 import { msgSchema } from './message.validtion.js'
 

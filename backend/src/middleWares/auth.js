@@ -10,4 +10,16 @@ const userAuth = (req, res, next)=> {
     })
 }
 
-export default userAuth
+const emailAuth = (req, res, next)=> {
+    const {token}= req.params
+    jwt.verify(token, process.env.KEY, (err, decoded)=>{
+        if(err) return res.json(err)
+        
+        req.email = decoded.email
+        next()
+    })
+}
+export { 
+    userAuth,
+    emailAuth
+}

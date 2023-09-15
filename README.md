@@ -1,48 +1,78 @@
-# Sarhni Simulation - MEAN Full-Stack Project
-# Login and SignUp API
+# Sarhni Clone - MEAN Full-Stack Project
 
-## Introduction
+## Project Description
 
-Sarhni Simulation is a MEAN full-stack project designed to simulate sarhni application. By combining the robustness of MongoDB, the flexibility of Express.js, the interactivity of Angular, and the scalability of Node.js, this project offers a seamless user experience.
+Sarhni Clone is a full-stack web application that allows users to receive anonymous messages from others without knowing the sender's identity. Users can create an account using their email, verify their email through a confirmation link, and then sign in to read and manage the received messages. Additionally, users can generate a sharable link to receive messages from friends without revealing their identity.
 
-## Dependencies
+### Features
 
-This project relies on the following dependencies:
+- User registration and authentication via email confirmation, youser can't sign in without consirmation.
+- Send and receive anonymous messages.
+- Delete received messages.
+- Generate sharable links for friends to send anonymous messages.
 
-- **bcrypt**: ^5.1.0
-- **cors**: ^2.8.5
-- **dotenv**: ^16.3.1
-- **express**: ^4.18.2
-- **joi**: ^17.9.2
-- **jsonwebtoken**: ^9.0.1
-- **mongoose**: ^7.4.2
+## Technologies Used
 
-These dependencies handle various critical aspects of the application, such as user authentication, data storage, validation, and more.
+- **Frontend**:
+  - Angular
+  - Angular Material
+  - Angular Router
+  - HttpClient for API requests
 
-## Getting Started
+- **Backend**:
+  - Node.js with Express.js
+  - MongoDB for database storage
+  - Mongoose for database modeling
+  - Passport.js for authentication
+  - Nodemailer for sending confirmation emails
 
-To begin with the Sarhni Simulation project, follow the steps below.
+## Installation
 
-### Installation
-
-1. Clone this repository to your local machine using the following command:
-
+1. Clone the repository:
    ```bash
    git clone https://github.com/NadaAly56/Sarhni_Simulation_MEAN.git
-
-2. Navigate to the project directory:
-    ```bash
    cd Sarhni_Simulation_MEAN
 
-4. Install the required dependencies using npm:
-    ```bash
+2. Install the frontend dependencies:
+   cd frontend
    npm install
 
-### Configuration
+3. Install the backend dependencies:
+   cd ../backend
+   npm install
 
-Create a .env file in the root directory of the project to store environment variables:
-PORT=your-port
-MONGODB_URI=your-mongodb-connection-string
-JWT_SECRET=your-jwt-secret
-ROUND=your-bcrypt-hash-round
+4. Set up Environment Variables:
+      Create a .env file in the backend directory and set the following environment variables:
+      PASS=your_password
+      EMAIL=your_email
+      KEY=your_secret_key
+      ROUND=number_of_rounds_for_password_hashing
+      PORT=your_server_port
+      DBCONNECTION=your_mongodb_connection_string
 
+5. Start the Frontend and Backend:
+      In the frontend directory:
+      npm start
+
+      In the backend directory:
+      npm start
+      or nodemon
+
+## Usage
+
+1. Register for an account using your email address.
+2. Verify your email address by clicking the confirmation link sent to your email.
+3. Log in to your account.
+4. Share the generated link with friends to receive anonymous messages.
+5. View and manage received messages in your account.
+
+## Contributing
+   If you would like to contribute to this project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and test them thoroughly.
+4. Commit your changes and create a pull request.
+
+## Contact
+   For any inquiries or support, please contact Nada Aly at nada.aly5613@gmail.com.

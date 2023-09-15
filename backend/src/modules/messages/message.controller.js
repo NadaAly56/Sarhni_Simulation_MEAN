@@ -1,23 +1,28 @@
 import { messageModel } from "../../../database/models/message.model.js"
+import { catchAsyncError } from "../../utilis/utilsFuctions.js"
 
-const sendMsg = async(req, res) => {
-    const {id} = req.params
-    const {message} = req.body
-    const msg = await messageModel.insertMany({message, receivedId:id})
-    res.json({msg: 'success', msg})
-}
+const sendMsg = catchAsyncError(
+    async(req, res) => {
+        const {id} = req.params
+        const {message} = req.body
+        const msgObj = await messageModel.insertMany({message, receivedId:id})
+        res.json({msg: 'success', msgObj})
+    }
+)
 
-const getUserMsgs = async(req, res) => {
+const getUserMsgs = catchAsyncError(async(req, res) => {
     const id = req.id
     const msgs = await messageModel.find({receivedId:id}).populate('receivedId')
     res.json({msg:'success',msgs})
-}
+})
 
-const deleteMsg = async(req, res) => {
-    const {_id} = req.body
-    const msg = await messageModel.findByIdAndDelete(_id)
-    res.json({msg:'success',msg})
-}
+const deleteMsg = catchAsyncError(
+    async(req, res) => {
+        const _id = req.header('id')
+        const msgs = await messageModel.findByIdAndDelete(_id)
+        res.json({msg:'success',msgs})
+    }
+)
 export {
     sendMsg,
     getUserMsgs,
